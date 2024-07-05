@@ -12,7 +12,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ['firebase/app', 'firebase/auth', 'firebase/firestore', 'firebase/storage','emoji-picker-react',
-        'react-toastify','zustand',],
+        'react-toastify','zustand','react-toastify/dist/ReactToastify.css',],
     },
   },
 });
