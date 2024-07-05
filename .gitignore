@@ -24,4 +24,3 @@
 *.sw?
 public/flower2.jpg
 .env
-node_modules
