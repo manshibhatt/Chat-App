@@ -9,6 +9,14 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  optimizeDeps: {
+    include: [
+      'firebase/app',
+      'firebase/auth',
+      'firebase/firestore',
+      'firebase/storage',
+    ],
+  },
   build: {
     rollupOptions: {
       external: ['firebase/app', 'firebase/auth', 'firebase/firestore', 'firebase/storage','emoji-picker-react',
