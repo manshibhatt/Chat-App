@@ -15,7 +15,7 @@ const Login=()=>{
         url:""
     })
 
-    const [loading,setLoading]=useState(false)
+    const [loading,setLoading]=useState(false) 
 
     const handleAvatar = e=>{
         if(e.target.files[0]){
@@ -26,18 +26,19 @@ const Login=()=>{
     }
 }    
 
-     const handleLogin=async(e)=>{
+     const handleLogin=async(e)=>{ 
         e.preventDefault()
         setLoading(true)
 
         const formData=new FormData(e.target)
-
+        
         const {email,password} = Object.fromEntries(formData)
-
+        
         try{
-           await signInWithEmailAndPassword(auth,email,password)
+            await signInWithEmailAndPassword(auth,email,password) 
+            alert('Login successful! Please refresh the page.'); 
         }
-        catch(err){
+        catch(err){ 
           console.log(err)
           toast.error("User not found!Create an account.")
         }
