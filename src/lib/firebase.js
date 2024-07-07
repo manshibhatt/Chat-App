@@ -6,7 +6,7 @@ import "firebase/compat/storage"; // Import compat/storage for storage
 
 
 const firebaseConfig = { 
-   apiKey: "AIzaSyBCZ-UGmGqLpHhL7ON5d2Rz1fUVXJ_h8mQ",
+   apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "reactchat-c29c2.firebaseapp.com",
   projectId: "reactchat-c29c2",
   storageBucket: "reactchat-c29c2.appspot.com",
