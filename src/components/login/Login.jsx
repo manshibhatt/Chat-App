@@ -56,7 +56,7 @@ const Login=()=>{
         try{
          const res=await createUserWithEmailAndPassword(auth,email,password) 
 
-         const imgUrl= await upload(avatar.file)
+         const imgUrl= await upload(avatar.file)||'../../public\avatar.png'
          
          await setDoc(doc(db,"users",res.user.uid),{
            username,
